@@ -185,13 +185,13 @@ public class JParser {
     
     private static boolean parseComparison(String equation, Variable[] vars, Function[] funcs) throws Exception {
         // Try to pattern match it to:
-        // add < add
-        // If that fails, match it to:
-        // add > add
-        // If that fails, match it to:
         // add <= add
         // If that fails, match it to:
         // add >= add
+        // If that fails, match it to:
+        // add < add
+        // If that fails, match it to:
+        // add > add
         // If that fails, match it to:
         // add == add
         // If that fails, match it to:
@@ -481,9 +481,7 @@ public class JParser {
         try {
             return Double.parseDouble(equation);
         } catch(Exception e) {
-            String error = e.getMessage();
-            error = error.substring("For input string: ".length(), error.length());
-            throw new Exception("Check here: " + error);
+            throw new Exception("Check here: " + equation);
         }
     }
     
