@@ -19,7 +19,7 @@ public class JParserTests {
             new Result(45),
             new Result(24)
         };
-        Variable[][] vars = {
+        JParser.Variable[][] vars = {
             null,
             null,
             null,
@@ -27,7 +27,7 @@ public class JParserTests {
             new JParser.Variable[]{new JParser.Variable("x", 450)},
             null
         };
-        Function[][] funcs = {
+        JParser.Function[][] funcs = {
             null,
             null,
             null,
